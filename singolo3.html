@@ -7,6 +7,58 @@
   <link rel="stylesheet" href="./singolo3.css">
 </head>
 <body>
-  
+  <main>
+    <div class="feedback">
+      <div class="feedback__inner">
+        <h2>Get a Quote</h2>
+        <p class="feedback__description">
+          Fusce dapibus, tellus ac cursus commodo, 
+          tortor mauris condimentum. Duis mollis, 
+          non commodo luctus, nisi erat porttitor <span>ligula, 
+          eget lacinia odio sem nec elit. Fusce dapibus, 
+          tellus ac cursus commodo, tortor mauris condimentum 
+          nibh.</span>
+        </p>
+        <div class="feedback__field">
+          <form action="mailto:artur.bukato@gmail.com" method="POST">
+            <label for="name">
+              <input type="text" id="name" name="name" placeholder="Name (Required)" required>
+            </label>
+            <label for="email">
+              <input type="email" id="email" name="email" placeholder="Email (Required)" required>
+            </label>
+            <label for="subject">
+              <input type="text" id="subject" name="subject" placeholder="Subject">
+            </label>
+            <label class="message" for="message">
+              <textarea type="text" id="message" name="message" placeholder="Describe your project in detail..."></textarea>
+            </label>
+          </form>
+          <div class="feedback__contact-info">
+            <h3>Contact Information</h3>
+            <p class="feedback__text">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. 
+              Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed 
+              nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+            </p>
+            <ul>
+              <li>
+                <div class="contact__icon-container"><img src="./assets/images/location.png" alt="location" width="7" height="11"></div>
+                <p class="contact-content">Elm St. 14/05 Lost City</p>
+              </li>
+              <li>
+                <div class="contact__icon-container"><img class="contact-phone-icon" src="./assets/images/contact-phone.png" alt="phone" width="12" height="13"></div>
+                <p class="contact-content">03528 331 86 35</p>
+              </li>
+              <li>
+                <div class="contact__icon-container"><img src="./assets/images/mail.png" alt="mail" width="13" height="8"></div>
+                <p class="contact-content">info@singolo.com</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
