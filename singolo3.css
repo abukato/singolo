@@ -154,7 +154,7 @@ textarea::placeholder {
 }
 
 .contact__icon-container img {
-  align-content: center;
+  align-content: flex-end;
 }
 
 .contact-content {
