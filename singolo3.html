@@ -20,19 +20,20 @@
           nibh.</span>
         </p>
         <div class="feedback__field">
-          <form action="mailto:artur.bukato@gmail.com" method="POST">
+          <form id="feedback-form" action="" method="GET">
             <label for="name">
-              <input type="text" id="name" name="name" placeholder="Name (Required)" required>
+              <input type="text" id="name" name="name" form="feedback-form" pattern="[a-zA-Z]+" minlength="4" maxlength="10" placeholder="Name (Required)" required>
             </label>
             <label for="email">
-              <input type="email" id="email" name="email" placeholder="Email (Required)" required>
+              <input type="email" id="email" name="email" form="feedback-form" placeholder="Email (Required)" required>
             </label>
             <label for="subject">
-              <input type="text" id="subject" name="subject" placeholder="Subject">
+              <input type="text" id="subject" name="subject" form="feedback-form" placeholder="Subject">
             </label>
             <label class="message" for="message">
-              <textarea type="text" id="message" name="message" placeholder="Describe your project in detail..."></textarea>
+              <textarea type="text" id="message" name="message" form="feedback-form" placeholder="Describe your project in detail..."></textarea>
             </label>
+            <input class="submit-btn" type="submit" form="feedback-form" value="Send">
           </form>
           <div class="feedback__contact-info">
             <h3>Contact Information</h3>
