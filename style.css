@@ -134,12 +134,56 @@ header a {
 }
 
 .slider__slide-1 {
+  position: relative;
+  z-index: 0;
+}
+
+.vertical-phone {
   position: absolute;
-  top: 19px;
-  left: 16px;
-  background: url('./assets/images/slide1.png') center no-repeat;
-  width: 100%;
+  top: 53px;
+  left: 72px;
+  z-index: 1;
+}
+
+.vertical-phone__display {
+  width: 188px;
+  height: 333px;
+  position: absolute;
+  top: 118px;
+  left: 86px;
+  z-index: 2;
+}
+
+.vertical-phone__display-image {
   height: 100%;
+  width: 100%;
+  background-image: url("./assets/images/vertical-phone-image.jpg");
+  background-repeat: no-repeat;
+  background-position: 3.5% 54.5%;
+}
+
+.horizontal-phone {
+  position: absolute;
+  top: 174px;
+  right: 71px;
+  z-index: 1;
+}
+
+.horizontal-phone__display {
+  width: 333px;
+  height: 188px;
+  position: absolute;
+  right: 162px;
+  top: 188px;
+  z-index: 2;
+}
+
+.horizontal-phone__display-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/images/horizontal-phone-image.jpg");
+  background-repeat: no-repeat;
+  background-position: 50.5% 30.3%;
 }
 
 .services {
