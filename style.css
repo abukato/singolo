@@ -234,7 +234,7 @@ header a {
   width: 300px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 }
 
 .services__item--icon {
@@ -245,6 +245,48 @@ header a {
   height: 59px;
   border: 2px solid #767e9e;
   border-radius: 50%;
+}
+
+.icon-pen {
+  background-image: url("./assets/images/pen.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-bulb {
+  background-image: url("./assets/images/bulb.png");
+  background-repeat: no-repeat;
+  background-position: center 49%;
+}
+
+.icon-heart {
+  background-image: url("./assets/images/heart.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-heart {
+  background-image: url("./assets/images/heart.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-phone {
+  background-image: url("./assets/images/phone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-bubble {
+  background-image: url("./assets/images/bubble.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-star {
+  background-image: url("./assets/images/star.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .services__item--info {
@@ -268,6 +310,8 @@ header a {
   line-height: 21px;
   color: #767e9e;
   text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .portfolio {
   width: 100%;
@@ -308,8 +352,10 @@ header a {
 }
 
 .portfolio__list--button {
-  height: 22px;
+  /* height: 22px; */
+  padding: 0 6px;
   font-size: 12px;
+  line-height: 20px;
   font-weight: 400;
   color: #767e9e;
   border-radius: 5px;
@@ -318,24 +364,12 @@ header a {
   transition: all 350ms ease-out;
 }
 
+.portfolio__list--button:last-child {
+  padding: 0 5px;
+}
+
 .portfolio__list--button:not(:last-child) {
   margin-right: 7px;
-}
-
-.button-all {
-  width: 29px;
-}
-
-.button-web {
-  width: 78px;
-}
-
-.button-graphic {
-  width: 93px;
-}
-
-.button-art {
-  width: 57px;
 }
 
 .portfolio__list--button:hover {
@@ -550,6 +584,7 @@ header a {
   font-weight: 400;
   letter-spacing: -0.06px;
   margin-bottom: 22px;
+  text-align: justify;
 }
 
 .member__social {
