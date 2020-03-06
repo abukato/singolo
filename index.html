@@ -160,10 +160,10 @@
             <div class="member__name">Adam Jensen</div>
             <div class="member__text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</div>
             <ul class="member__social member__social1">
-              <li class="social__icon social__icon-fb"><img src="./assets/images/facebook.png" alt="facebook" width="8" height="14"></li>
-              <li class="social__icon social__icon-google"><img src="./assets/images/google+.png" alt="google+" width="14" height="14"></li>
-              <li class="social__icon social__icon-twitter"><img src="./assets/images/twitter.png" alt="twitter" width="14" height="12"></li>
-              <li class="social__icon social__icon-linkedin"><img src="./assets/images/linkedin.png" alt="linkedin" width="14" height="14"></li>
+              <li class="social__icon social__icon-fb"></li>
+              <li class="social__icon social__icon-google"></li>
+              <li class="social__icon social__icon-twitter"></li>
+              <li class="social__icon social__icon-linkedin"></li>
             </ul>
           </div>
           <div class="about-us__member">
@@ -171,10 +171,10 @@
             <div class="member__name">Desmond Miles</div>
             <div class="member__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</div>
             <ul class="member__social member__social2">
-              <li class="social__icon social__icon-fb"><img src="./assets/images/facebook.png" alt="facebook" width="8" height="14"></li>
-              <li class="social__icon social__icon-google"><img src="./assets/images/google+.png" alt="google+" width="14 height="14"></li>
-              <li class="social__icon social__icon-twitter"><img src="./assets/images/twitter.png" alt="twitter" width="14" height="12"></li>
-              <li class="social__icon social__icon-linkedin"><img src="./assets/images/linkedin.png" alt="linkedin" width="14" height="14"></li>
+              <li class="social__icon social__icon-fb"></li>
+              <li class="social__icon social__icon-google"></li>
+              <li class="social__icon social__icon-twitter"></li>
+              <li class="social__icon social__icon-linkedin"></li>
             </ul>
           </div>
           <div class="about-us__member">
@@ -182,10 +182,10 @@
             <div class="member__name">Scolara Visari</div>
             <div class="member__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</div>
             <ul class="member__social member__social3">
-              <li class="social__icon social__icon-fb"><img src="./assets/images/facebook.png" alt="facebook" width="8" height="14"></li>
-              <li class="social__icon social__icon-google"><img src="./assets/images/google+.png" alt="google+" width="14" height="14"></li>
-              <li class="social__icon social__icon-twitter"><img src="./assets/images/twitter.png" alt="twitter" width="14" height="12"></li>
-              <li class="social__icon social__icon-linkedin"><img src="./assets/images/linkedin.png" alt="linkedin" width="14" height="14"></li>
+              <li class="social__icon social__icon-fb"></li>
+              <li class="social__icon social__icon-google"></li>
+              <li class="social__icon social__icon-twitter"></li>
+              <li class="social__icon social__icon-linkedin"></li>
             </ul>
           </div>
         </div>
@@ -197,13 +197,13 @@
         <p class="feedback__description">
           Fusce dapibus, tellus ac cursus commodo, 
           tortor mauris condimentum. Duis mollis, 
-          non commodo luctus, nisi erat porttitor <span>ligula, 
+          non commodo luctus, nisi erat porttitor ligula, 
           eget lacinia odio sem nec elit. Fusce dapibus, 
           tellus ac cursus commodo, tortor mauris condimentum 
-          nibh.</span>
+          nibh.
         </p>
         <div class="feedback__field">
-          <form id="feedback-form" action="" method="GET">
+          <form id="feedback-form" action="" method="POST">
             <label for="name">
               <input type="text" id="name" name="name" form="feedback-form" pattern="[a-zA-Z]+" minlength="4" maxlength="10" placeholder="Name (Required)" required>
             </label>
@@ -221,25 +221,25 @@
           <div class="feedback__contact-info">
             <h3>Contact Information</h3>
             <p class="feedback__text">
-              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. 
-              Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed 
-              nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+              Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed
+              nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
             </p>
             <ul>
               <li>
-                <a class="contact__icon-container">
+                <a class="contact__icon-container icon-location">
                   <img src="./assets/images/location.png" alt="location" width="7" height="11">
                 </a>
                 <p class="contact-content">Elm St. 14/05 Lost City</p>
               </li>
               <li>
-                <a class="contact__icon-container" href="tel:035283318635">
-                  <img class="contact-phone-icon" src="./assets/images/contact-phone.png" alt="phone" width="11" height="13">
+                <a class="contact__icon-container icon-contact-phone" href="tel:035283318635">
+                  <img class="contact-phone-icon" src="./assets/images/contact-phone.png" alt="phone" width="11" height="11">
                 </a>
                 <p class="contact-content">03528 331 86 35</p>
               </li>
               <li>
-                <a class="contact__icon-container" href="mailto:info@singolo.com">
+                <a class="contact__icon-container icon-contact-mail" href="mailto:info@singolo.com">
                   <img src="./assets/images/mail.png" alt="mail" width="13" height="8">
                 </a>
                 <p class="contact-content">info@singolo.com</p>
@@ -256,10 +256,10 @@
         &copy; Copyright 2013
       </p>
       <ul class="social-media">
-        <li class="social__icon"><a href="#"><img src="./assets/images/facebook.png" alt="facebook" width="8" height="14"></a></li>
-        <li class="social__icon"><a href="#"><img src="./assets/images/google+.png" alt="google+" width="14" height="14"></a></li>
-        <li class="social__icon"><a href="#"><img src="./assets/images/twitter.png" alt="twitter" width="14" height="12"></a></li>
-        <li class="social__icon"><a href="#"><img src="./assets/images/linkedin.png" alt="linkedin" width="14" height="14"></a></li>
+        <li class="social__icon social__icon-fb"><a href="#"></a></li>
+        <li class="social__icon social__icon-google"><a href="#"></a></li>
+        <li class="social__icon social__icon-twitter"><a href="#"></a></li>
+        <li class="social__icon social__icon-linkedin"><a href="#"></a></li>
       </ul>
     </div>
   </footer>
