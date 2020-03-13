@@ -9,7 +9,7 @@ const PREV_BTN = document.querySelector('.button-prev');
 const NEXT_BTN = document.querySelector('.button-next');
 
 const TABS = document.querySelector('.portfolio__list--control');
-const PREVIEW_CONTAINER = document.getElementById('preview-container');
+const PORTFOLIO_LIST = document.getElementById('portfolio__list');
 
 const FORM = document.getElementById('feedback-form');
 const SUBMIT_BTN = document.getElementById('submit-btn');
@@ -90,21 +90,21 @@ TABS.addEventListener('click', (event) => {
       elem.classList.remove('portfolio__list--button-active');
       event.target.classList.add('portfolio__list--button-active');
     });
-    PREVIEW_CONTAINER.querySelectorAll('li').forEach(li => {
+    PORTFOLIO_LIST.querySelectorAll('li').forEach(li => {
       li.style.order = '';
       li.style.order = `${Math.floor(Math.random()*100)}`;
     });
   }
 });
 
-PREVIEW_CONTAINER.addEventListener('click', (event) => {
+PORTFOLIO_LIST.addEventListener('click', (event) => {
   if (event.target.tagName === 'DIV') {
-    PREVIEW_CONTAINER.querySelectorAll('div').forEach(div => {
+    PORTFOLIO_LIST.querySelectorAll('div').forEach(div => {
       div.parentNode.classList.remove('portfolio__preview-bordered');
     });
     event.target.parentNode.classList.add('portfolio__preview-bordered');
   } else {
-    PREVIEW_CONTAINER.querySelectorAll('div').forEach(div => {
+    PORTFOLIO_LIST.querySelectorAll('div').forEach(div => {
       div.parentNode.classList.remove('portfolio__preview-bordered');
     });
   }

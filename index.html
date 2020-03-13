@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <div class="header__inner">
+    <div class="wrapper header__inner">
       <h1 class="logo"><a href="#">Singolo<span class="logo-star">*</span></a></h1>
       <nav>
         <ul class="navigation">
@@ -52,12 +52,12 @@
       </div>
     </section>
     <section class="services" id="services">
-      <div class="services__inner">
-        <h2>Our Services</h2>
-        <p>
+      <div class="wrapper">
+        <h2 class="section__title services__title">Our Services</h2>
+        <p class="section__description services__description">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-          Duis mollis, non commodo luctus, nisi erat porttitor ligula, <span class="services__another-letterspacing">eget lacinia odio sem nec elit. 
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span>
+          Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </p>
         <div class="services__items">
           <div class="services__item">
@@ -132,41 +132,37 @@
       </div>
     </section>
     <section class="portfolio" id="portfolio">
-      <div class="portfolio__inner">
-        <h2>Portfolio</h2>
-        <div class="portfolio__list">
-          <p class="portfolio__list--info">
-            Duis mollis, est non commodo luctus,
-            nisi erat porttitor ligula,
-            eget lacinia odio sem nec elit.
-          </p>
-          <div class="portfolio__list--control">
-            <button class="portfolio__list--button button-all portfolio__list--button-active">All</button>
-            <button class="portfolio__list--button button-web">Web Design</button>
-            <button class="portfolio__list--button button-graphic">Graphic Design</button>
-            <button class="portfolio__list--button button-art">Artwork</button>
-          </div>
-          <ul class="portfolio__list-container" id="preview-container"">
-            <li class="portfolio__preview img1"><div class="preview-1"></div></li>
-            <li class="portfolio__preview img2"><div class="preview-2"></div></li>
-            <li class="portfolio__preview img3"><div class="preview-3"></div></li>
-            <li class="portfolio__preview img4"><div class="preview-4"></div></li>
-            <li class="portfolio__preview img5"><div class="preview-5"></div></li>
-            <li class="portfolio__preview img6"><div class="preview-6"></div></li>
-            <li class="portfolio__preview img7"><div class="preview-7"></div></li>
-            <li class="portfolio__preview img8"><div class="preview-8"></div></li>
-            <li class="portfolio__preview img9"><div class="preview-9"></div></li>
-            <li class="portfolio__preview img10"><div class="preview-10"></div></li>
-            <li class="portfolio__preview img11"><div class="preview-11"></div></li>
-            <li class="portfolio__preview img12"><div class="preview-12"></div></li>
-          </ul>
+      <div class="wrapper">
+        <h2 class="section__title portfolio__title">Portfolio</h2>
+        <p class="section__description portfolio__description">
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+        </p>
+        <div class="portfolio__list--control">
+          <button class="portfolio__list--button button-all portfolio__list--button-active">All</button>
+          <button class="portfolio__list--button button-web">Web Design</button>
+          <button class="portfolio__list--button button-graphic">Graphic Design</button>
+          <button class="portfolio__list--button button-art">Artwork</button>
         </div>
+        <ul class="portfolio__list" id="portfolio__list">
+          <li class="portfolio__preview img1"><div class="preview preview-1"></div></li>
+          <li class="portfolio__preview img2"><div class="preview preview-2"></div></li>
+          <li class="portfolio__preview img3"><div class="preview preview-3"></div></li>
+          <li class="portfolio__preview img4"><div class="preview preview-4"></div></li>
+          <li class="portfolio__preview img5"><div class="preview preview-5"></div></li>
+          <li class="portfolio__preview img6"><div class="preview preview-6"></div></li>
+          <li class="portfolio__preview img7"><div class="preview preview-7"></div></li>
+          <li class="portfolio__preview img8"><div class="preview preview-8"></div></li>
+          <li class="portfolio__preview img9"><div class="preview preview-9"></div></li>
+          <li class="portfolio__preview img10"><div class="preview preview-10"></div></li>
+          <li class="portfolio__preview img11"><div class="preview preview-11"></div></li>
+          <li class="portfolio__preview img12"><div class="preview preview-12"></div></li>
+        </ul>
       </div>
     </section>
     <section class="about-us" id="about-us">
-      <div class="about-us__inner">
-        <h2>About Us</h2>
-        <p class="about-us__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, <span class="about-us__another-letterspacing">eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
+      <div class="wrapper">
+        <h2 class="section__title about-us__title">About Us</h2>
+        <p class="section__description about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="about-us__members">
           <div class="about-us__member">
             <div class="member__photo"><div class="photo-1"></div></div>
@@ -205,9 +201,9 @@
       </div>
     </section>
     <section class="feedback" id="feedback">
-      <div class="feedback__inner">
-        <h2>Get a Quote</h2>
-        <p class="feedback__description">
+      <div class="wrapper feedback__inner">
+        <h2 class="section__title feedback__title">Get a Quote</h2>
+        <p class="section__description feedback__description">
           Fusce dapibus, tellus ac cursus commodo, 
           tortor mauris condimentum. Duis mollis, 
           non commodo luctus, nisi erat porttitor ligula, 
@@ -218,7 +214,7 @@
         <div class="feedback__field">
           <form id="feedback-form" action="#" method="POST">
             <label for="name">
-              <input type="text" id="name" name="name" form="feedback-form" pattern="[a-zA-Z]+" minlength="2" maxlength="10" placeholder="Name (Required)" required>
+              <input type="text" id="name" name="name" form="feedback-form" pattern="[a-zA-Z]+" minlength="2" maxlength="20" placeholder="Name (Required)" required>
             </label>
             <label for="email">
               <input type="email" id="email" name="email" form="feedback-form" placeholder="Email (Required)" required>
@@ -269,7 +265,7 @@
     </div>
   </main>
   <footer>
-    <div class="footer__inner">
+    <div class="wrapper footer__inner">
       <p class="copyright">
         &copy; Copyright 2013
       </p>
