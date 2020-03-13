@@ -733,6 +733,61 @@ form {
   width: 620px;
 }
 
+.popup {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #0008;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup__message {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 250px);
+  padding: 20px;
+  background-color: #fef9f9;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.popup h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.popup p {
+  max-height: 330px;
+  margin-bottom: 15px;
+  text-align: justify;
+  overflow: auto;
+}
+
+.close-btn {
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 900;
+  transition: all 250ms ease-in-out;
+  background-color: #008080;
+  color: #ffffff;
+  border: none;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 input,
 textarea {
   width: 619px;
@@ -778,6 +833,7 @@ textarea::placeholder {
 }
 
 .submit-btn {
+  color: #f0d8d9;
   width: 100px;
   font-size: 14px;
   font-weight: 900;

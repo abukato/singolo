@@ -11,6 +11,10 @@ const NEXT_BTN = document.querySelector('.button-next');
 const TABS = document.querySelector('.portfolio__list--control');
 const PREVIEW_CONTAINER = document.getElementById('preview-container');
 
+const FORM = document.getElementById('feedback-form');
+const SUBMIT_BTN = document.getElementById('submit-btn');
+const CLOSE_BTN = document.getElementById('close-btn');
+
 
 // Header tabs
 
@@ -104,4 +108,39 @@ PREVIEW_CONTAINER.addEventListener('click', (event) => {
       div.parentNode.classList.remove('portfolio__preview-bordered');
     });
   }
+});
+
+
+// FORM SUBMIT
+
+
+SUBMIT_BTN.addEventListener('click', (event) => {
+  const POPUP_MESSAGE = document.getElementById('popup__message');
+
+  const SUBJECT_VALUE = document.getElementById('subject').value 
+    ? `Тема: ${document.getElementById('subject').value}` 
+    : `Без темы`;
+  const MESSAGE_VALUE = document.getElementById('message').value 
+    ? `Описание: ${document.getElementById('message').value}` 
+    : `Без описания`;
+
+  if (FORM.checkValidity()) {
+    document.querySelector('.popup').classList.remove('hidden');
+
+    POPUP_MESSAGE.insertAdjacentHTML('afterbegin', 
+      `<h4>Письмо отправлено</h4>
+      <p>${SUBJECT_VALUE}</p>
+      <p>${MESSAGE_VALUE}</p>`
+    );
+    event.preventDefault();
+  }
+});
+
+CLOSE_BTN.addEventListener('click', (event) => {
+  document.querySelector('.popup').classList.add('hidden');
+  document.querySelector('.popup__message h4').remove();
+  document.querySelectorAll('.popup__message p').forEach(p => {
+    p.remove();
+  });
+  FORM.reset();
 });

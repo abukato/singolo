@@ -216,7 +216,7 @@
           nibh.
         </p>
         <div class="feedback__field">
-          <form id="feedback-form" action="/" method="POST">
+          <form id="feedback-form" action="#" method="POST">
             <label for="name">
               <input type="text" id="name" name="name" form="feedback-form" pattern="[a-zA-Z]+" minlength="2" maxlength="10" placeholder="Name (Required)" required>
             </label>
@@ -229,7 +229,7 @@
             <label class="message" for="message">
               <textarea id="message" name="message" form="feedback-form" placeholder="Describe your project in detail..."></textarea>
             </label>
-            <input class="submit-btn" type="submit" form="feedback-form" value="Send">
+            <input id="submit-btn" class="submit-btn" type="submit" form="feedback-form" value="Send">
           </form>
           <div class="feedback__contact-info">
             <h3>Contact Information</h3>
@@ -262,6 +262,11 @@
         </div>
       </div>
     </section>
+    <div class="popup hidden" id="popup">
+      <div class="popup__message" id="popup__message">
+        <button class="close-btn" id="close-btn">OK</button>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="footer__inner">
