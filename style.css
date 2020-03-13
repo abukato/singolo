@@ -300,6 +300,8 @@ header a {
 .services__item--info {
   width: 220px;
   height: 90px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .services__item--info__title {
@@ -318,8 +320,6 @@ header a {
   line-height: 21px;
   color: #767e9e;
   text-align: justify;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .portfolio {
