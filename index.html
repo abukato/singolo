@@ -23,20 +23,32 @@
   </header>
   <main>
     <section class="slider">
-      <div class="slider__inner">
-        <h2 class="slider-title">slider</h2>
-        <button class="slider__button slider__button-prev"></button>
-        <div class="slider__slide slider__slide-1">
-          <img class="vertical-phone" src="./assets/images/vertical-phone.png" alt="vertical-phone">
-          <div class="vertical-phone__display">
-            <div class="vertical-phone__display-image"></div>
+      <div class="carousel" id="carousel">
+        <div class="carousel__slides">
+          <div class="carousel__slide">
+            <div class="carousel__slide-1">
+              <div class="vertical-phone" id="vertical-phone">
+                <img src="./assets/images/vertical-phone.png" alt="vertical-phone">
+                <div class="vertical-phone__display">
+                  <div class="vertical-phone__display-image"></div>
+                </div>
+              </div>
+              <div class="horizontal-phone" id="horizontal-phone">
+                <img src="./assets/images/horizontal-phone.png" alt="horizontal-phone">
+                <div class="horizontal-phone__display">
+                  <div class="horizontal-phone__display-image"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <img class="horizontal-phone" src="./assets/images/horizontal-phone.png" alt="vertical-phone">
-          <div class="horizontal-phone__display">
-            <div class="horizontal-phone__display-image"></div>
+          <div class="carousel__slide carousel__slide-2">
+            <img src="./assets/images/Slide-2.jpg" alt="slide-2" width="1020" height="594">
           </div>
         </div>
-        <button class="slider__button slider__button-next"></button>
+        <div class="carousel__controls">
+          <span class="carousel__controls__button button-prev"></span>
+          <span class="carousel__controls__button button-next"></span>
+        </div>
       </div>
     </section>
     <section class="services" id="services">

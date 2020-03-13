@@ -86,29 +86,13 @@ header a {
 }
 
 .slider {
+  width: 1020px;
   height: 600px;
   margin: 0 auto;
-  background: #f06c64;
-  border-bottom: 5px solid #ea676b;
   position: relative;
 }
 
-.slider__inner {
-  width: 940px;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.slider-title {
-  font-size: 1px;
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  visibility: hidden;
-}
-
-.slider__button {
+.carousel__controls__button {
   background: inherit;
   outline: none;
   position: absolute;
@@ -123,44 +107,88 @@ header a {
   transition: border 150ms ease-in-out;
 }
 
-.slider__button-prev {
-  left: 5px;
+.button-prev {
+  left: 45px;
   width: 20px;
   height: 20px;
   transform: rotate(135deg);
 }
 
-.slider__button-next {
-  right: 3px;
+.button-next {
+  right: 43px;
   width: 20px;
   height: 20px;
   transform: rotate(-45deg);
 }
 
-.slider__button:hover {
+.carousel__controls__button:hover {
   border-right-color: #000000;
   border-bottom-color: #000000;
 }
 
-.slider__slide-1 {
+.carousel {
+  width: 100%;
+  height: 100%;
   position: relative;
-  z-index: 0;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.carousel__slides {
+  display: flex;
+  height: 100%;
+  width: 200%;
+  flex-shrink: 0;
+  transition: all 0.5s;
+}
+
+.carousel__slide {
+  flex-basis: 50%;
+  flex-shrink: 0;
+  display: flex;
+  flex-grow: 1;
+}
+
+.carousel__slide-1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background: #f06c64;
+  border-bottom: 5px solid #ea676b;
+}
+
+.carousel__slide-2 {
+  width: 100%;
+  height: 100%;
+  background: #648BF0;
+  border-bottom: 5px solid #148BF0;
 }
 
 .vertical-phone {
   position: absolute;
   top: 53px;
-  left: 72px;
+  left: 112px;
   z-index: 1;
+}
+
+.vertical-phone:hover,
+.horizontal-phone:hover {
+  cursor: pointer;
 }
 
 .vertical-phone__display {
   width: 188px;
   height: 333px;
   position: absolute;
-  top: 118px;
-  left: 86px;
+  top: 65px;
+  left: 14px;
   z-index: 2;
+}
+
+.display-off {
+  display: none;
 }
 
 .vertical-phone__display-image {
@@ -174,7 +202,7 @@ header a {
 .horizontal-phone {
   position: absolute;
   top: 174px;
-  right: 71px;
+  right: 111px;
   z-index: 1;
 }
 
@@ -182,8 +210,8 @@ header a {
   width: 333px;
   height: 188px;
   position: absolute;
-  right: 162px;
-  top: 188px;
+  right: 91px;
+  top: 14px;
   z-index: 2;
 }
 
@@ -194,7 +222,6 @@ header a {
   background-repeat: no-repeat;
   background-position: 50.5% 30.3%;
 }
-
 .services {
   min-height: 500px;
   margin: 0 auto;
