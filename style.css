@@ -379,16 +379,13 @@ header a {
   font-weight: 300;
 }
 
-.portfolio__list {
-  height: 22px;
-}
-
 .portfolio__list--control {
   margin-bottom: 19px;
   padding-left: 1px;
 }
 
 .portfolio__list--button {
+  outline: none;
   padding: 0 6px;
   font-size: 12px;
   line-height: 20px;
@@ -397,7 +394,7 @@ header a {
   border-radius: 5px;
   background: inherit;
   border: 1px solid #666d89;
-  transition: all 350ms ease-out;
+  transition: all 250ms ease-out;
 }
 
 .portfolio__list--button:last-child {
@@ -412,6 +409,7 @@ header a {
   color: #dedede;
   border-color: #c5c5c5;
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .portfolio__list--button-active {
@@ -425,7 +423,10 @@ header a {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  overflow: hidden;
+}
+
+.portfolio__preview:nth-child(n+13) {
+  display: none;
 }
 
 .portfolio__preview {
@@ -435,6 +436,11 @@ header a {
   list-style-type: none;
   background-color: #464b5e;
   transition: opacity 250ms ease-in-out;
+  border: none;
+}
+
+.portfolio__preview-bordered {
+  outline: 5px solid #F06C64;
 }
 
 .portfolio__preview:first-child {

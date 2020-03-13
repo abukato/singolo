@@ -8,6 +8,9 @@ const SLIDES = document.querySelector('.carousel__slides');
 const PREV_BTN = document.querySelector('.button-prev');
 const NEXT_BTN = document.querySelector('.button-next');
 
+const TABS = document.querySelector('.portfolio__list--control');
+const PREVIEW_CONTAINER = document.getElementById('preview-container');
+
 
 // Header tabs
 
@@ -72,3 +75,33 @@ SLIDES.addEventListener('transitionend', function() {
     SLIDES.style.transition = 'all 0.5s';
   })
 }, false);
+
+
+// Portfolio TABS && shuffle preview image && BORDERED image
+
+
+TABS.addEventListener('click', (event) => {
+  if (event.target.tagName === 'BUTTON') {
+    TABS.querySelectorAll('button').forEach(elem => {
+      elem.classList.remove('portfolio__list--button-active');
+      event.target.classList.add('portfolio__list--button-active');
+    });
+    PREVIEW_CONTAINER.querySelectorAll('li').forEach(li => {
+      li.style.order = '';
+      li.style.order = `${Math.floor(Math.random()*100)}`;
+    });
+  }
+});
+
+PREVIEW_CONTAINER.addEventListener('click', (event) => {
+  if (event.target.tagName === 'DIV') {
+    PREVIEW_CONTAINER.querySelectorAll('div').forEach(div => {
+      div.parentNode.classList.remove('portfolio__preview-bordered');
+    });
+    event.target.parentNode.classList.add('portfolio__preview-bordered');
+  } else {
+    PREVIEW_CONTAINER.querySelectorAll('div').forEach(div => {
+      div.parentNode.classList.remove('portfolio__preview-bordered');
+    });
+  }
+});
