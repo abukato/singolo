@@ -8,7 +8,7 @@ const SLIDES = document.querySelector('.carousel__slides');
 const PREV_BTN = document.querySelector('.button-prev');
 const NEXT_BTN = document.querySelector('.button-next');
 
-const TABS = document.querySelector('.portfolio__list--control');
+const TABS = document.querySelector('.portfolio-controls');
 const PORTFOLIO_LIST = document.getElementById('portfolio__list');
 
 const FORM = document.getElementById('feedback-form');
@@ -22,14 +22,14 @@ const CLOSE_BTN = document.getElementById('close-btn');
 NAV.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
     NAV.querySelectorAll('li a').forEach(elem => {
-      elem.classList.remove('navigation-link_active');
-      event.target.classList.add('navigation-link_active');
+      elem.classList.remove('navigation__link_active');
+      event.target.classList.add('navigation__link_active');
     });
   }
 });
 
 
-// Slider 
+// Slider
 // Display OFF
 
 const phoneDisplayOff = (phone) => {
@@ -87,8 +87,8 @@ SLIDES.addEventListener('transitionend', function() {
 TABS.addEventListener('click', (event) => {
   if (event.target.tagName === 'BUTTON') {
     TABS.querySelectorAll('button').forEach(elem => {
-      elem.classList.remove('portfolio__list--button-active');
-      event.target.classList.add('portfolio__list--button-active');
+      elem.classList.remove('portfolio-controls__button_active');
+      event.target.classList.add('portfolio-controls__button_active');
     });
     PORTFOLIO_LIST.querySelectorAll('li').forEach(li => {
       li.style.order = '';
@@ -100,12 +100,12 @@ TABS.addEventListener('click', (event) => {
 PORTFOLIO_LIST.addEventListener('click', (event) => {
   if (event.target.tagName === 'DIV') {
     PORTFOLIO_LIST.querySelectorAll('div').forEach(div => {
-      div.parentNode.classList.remove('portfolio__preview-bordered');
+      div.parentNode.classList.remove('portfolio__preview_bordered');
     });
-    event.target.parentNode.classList.add('portfolio__preview-bordered');
+    event.target.parentNode.classList.add('portfolio__preview_bordered');
   } else {
     PORTFOLIO_LIST.querySelectorAll('div').forEach(div => {
-      div.parentNode.classList.remove('portfolio__preview-bordered');
+      div.parentNode.classList.remove('portfolio__preview_bordered');
     });
   }
 });
