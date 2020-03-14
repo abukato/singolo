@@ -9,7 +9,7 @@ const PREV_BTN = document.querySelector('.button-prev');
 const NEXT_BTN = document.querySelector('.button-next');
 
 const TABS = document.querySelector('.portfolio-controls');
-const PORTFOLIO_LIST = document.getElementById('portfolio__list');
+const PORTFOLIO_LIST = document.querySelector('.portfolio__list');
 
 const FORM = document.getElementById('feedback-form');
 const SUBMIT_BTN = document.getElementById('submit-btn');
@@ -17,7 +17,6 @@ const CLOSE_BTN = document.getElementById('close-btn');
 
 
 // Header tabs
-
 
 NAV.addEventListener('click', (event) => {
   if (event.target.tagName === 'A') {
@@ -83,12 +82,13 @@ SLIDES.addEventListener('transitionend', function() {
 
 // Portfolio TABS && shuffle preview image && BORDERED image
 
-
 TABS.addEventListener('click', (event) => {
   if (event.target.tagName === 'BUTTON') {
-    TABS.querySelectorAll('button').forEach(elem => {
-      elem.classList.remove('portfolio-controls__button_active');
+    TABS.querySelectorAll('button').forEach(button => {
+      button.classList.remove('portfolio-controls__button_active');
+      button.disabled = false;
       event.target.classList.add('portfolio-controls__button_active');
+      event.target.disabled = true;
     });
     PORTFOLIO_LIST.querySelectorAll('li').forEach(li => {
       li.style.order = '';
