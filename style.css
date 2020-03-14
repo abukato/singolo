@@ -389,7 +389,8 @@ section {
 }
 
 .portfolio-controls__button:hover {
-  color: #dedede;
+  color: #666d89;
+  background-color: #c5c5c5;
   border-color: #c5c5c5;
   cursor: pointer;
   transform: scale(1.05);
@@ -400,7 +401,9 @@ section {
   background-color: #c5c5c5;
   border-color: #c5c5c5;
   cursor: pointer;
+  transform: scale(1.05);
 }
+
 
 .portfolio-controls__button_active {
   color: #dedede;
@@ -521,7 +524,7 @@ section {
   margin-bottom: 45px;
 }
 
-.about-us__members {
+.about-us__members-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -584,9 +587,10 @@ section {
   text-align: justify;
 }
 
-.member__social {
+.social {
   display: flex;
   flex-direction: row;
+  list-style-type: none;
 }
 
 .member__social1 {
@@ -670,8 +674,8 @@ form {
 .popup {
   position: fixed;
   z-index: 999;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   background: #0008;
@@ -685,8 +689,9 @@ form {
   width: 500px;
   height: 500px;
   position: absolute;
-  top: calc(50% - 250px);
-  left: calc(50% - 250px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding: 20px;
   background-color: #fef9f9;
   border-radius: 5px;
@@ -806,19 +811,30 @@ textarea::placeholder {
   font-weight: 400;
 }
 
-.feedback__contact-info ul {
+.contacts {
   margin-top: 20px;
   list-style-type: none;
 }
 
-.feedback__contact-info li {
+.contacts__link {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  text-decoration: none;
+  color:#f0d8d9;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: -0.149px;
+  text-align: justify;
+  font-weight: 400;
+  transition: opacity 250ms ease-in;
 }
 
-.contact__icon-container {
+.contacts__link:hover {
+  opacity: 0.7;
+}
+
+.contacts__icon-container {
   width: 13px;
   height: 13px;
   display: flex;
@@ -833,14 +849,6 @@ textarea::placeholder {
 
 .icon-contact-phone {
   padding-bottom: 3px;
-}
-
-.contact-content {
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: -0.149px;
-  text-align: justify;
-  font-weight: 400;
 }
 
 footer {
@@ -866,9 +874,6 @@ footer {
   padding-bottom: 2px;
 }
 
-.social-media {
-  display: flex;
-  flex-direction: row;
+.footer-social {
   justify-content: space-between;
-  list-style-type: none;
 }

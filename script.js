@@ -75,7 +75,7 @@ SLIDES.addEventListener('transitionend', function() {
   SLIDES.style.transition = 'none';
   SLIDES.style.transform = 'translate(0)';
   setTimeout(() => {
-    SLIDES.style.transition = 'all 0.5s';
+    SLIDES.style.transition = 'all 0.7s';
   })
 }, false);
 
