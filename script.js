@@ -1,7 +1,7 @@
 const NAV = document.querySelector('.navigation');
 
-const V_PHONE = document.getElementById('vertical-phone');
-const H_PHONE = document.getElementById('horizontal-phone');
+const V_PHONE = document.querySelector('.vertical-phone');
+const H_PHONE = document.querySelector('.horizontal-phone');
 
 const CAROUSEL = document.querySelector('.carousel');
 const SLIDES = document.querySelector('.carousel__slides');
@@ -32,21 +32,21 @@ NAV.addEventListener('click', (event) => {
 // Slider 
 // Display OFF
 
-V_PHONE.addEventListener('click', (event) => {
-  if (V_PHONE.querySelector('div').classList.contains('display-off')) {
-    V_PHONE.querySelector('div').classList.remove('display-off');
+const phoneDisplayOff = (phone) => {
+  if (phone.querySelector('div').classList.contains('display-off')) {
+    phone.querySelector('div').classList.remove('display-off');
   } else {
-    V_PHONE.querySelector('div').classList.add('display-off');
+    phone.querySelector('div').classList.add('display-off');
   }
-});
+}
 
-H_PHONE.addEventListener('click', (event) => {
-  if (H_PHONE.querySelector('div').classList.contains('display-off')) {
-    H_PHONE.querySelector('div').classList.remove('display-off');
-  } else {
-    H_PHONE.querySelector('div').classList.add('display-off');
-  }
-});
+V_PHONE.addEventListener('click', () => {
+  phoneDisplayOff(V_PHONE);
+})
+
+H_PHONE.addEventListener('click', () => {
+  phoneDisplayOff(H_PHONE);
+})
 
 // CAROUSEL
 
