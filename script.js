@@ -171,6 +171,7 @@ const addSubmitButtonClickHandler = () => {
   document.querySelector('.submit-btn').addEventListener('click', (event) => {
     if (document.querySelector('.feedback-form').checkValidity()) {
       event.preventDefault();
+      event.target.disabled = true;
       createModalMessage();
       showModalWithResult(MODAL_MESSAGE);
     }
@@ -202,7 +203,7 @@ const addCloseButtonClickHandler = () => {
   document.querySelector('.close-btn').addEventListener('click', () => {
     closeModalWindow();
     clearModalWindow();
-    document.querySelector('.feedback-form').reset();
+    resetForm();
   });
 }
 
@@ -216,4 +217,9 @@ const clearModalWindow = () => {
   document.querySelectorAll('.modal__message p').forEach(p => {
     p.remove();
   });
+}
+
+const resetForm = () => {
+  document.querySelector('.feedback-form').reset();
+  document.querySelector('.submit-btn').disabled = false;
 }
