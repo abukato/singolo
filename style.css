@@ -187,11 +187,6 @@ main {
   z-index: 1;
 }
 
-.vertical-phone:hover,
-.horizontal-phone:hover {
-  cursor: pointer;
-}
-
 .vertical-phone__display {
   width: 188px;
   height: 333px;
@@ -226,6 +221,7 @@ main {
 
 .phone__button:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .vertical-phone__button {

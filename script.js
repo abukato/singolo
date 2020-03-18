@@ -52,10 +52,6 @@ const linkSwitcher = () => {
   }
 }
 
-const documentBottomCheck = () => {
-  
-}
-
 // Slider
 // TASK 2. Carousel functionality
 // TASK 3. Turn Off Phone Displays of First Slide
@@ -144,10 +140,22 @@ const switchingTags = (selectedTag) => {
 }
 
 const shuffleImages = () => {
-  document.querySelectorAll('.portfolio__preview').forEach(li => {
-    li.style.order = '';
-    li.style.order = `${Math.floor(Math.random()*100)}`;
+  const imagesArr = document.querySelectorAll('.portfolio__preview');
+  let shuffledArr = [...imagesArr];
+
+  imagesArr.forEach(el => el.remove());
+
+  for (let i = shuffledArr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let t = shuffledArr[i];
+    shuffledArr[i] = shuffledArr[j];
+    shuffledArr[j] = t;
+  }
+
+  shuffledArr.forEach(el => {
+    document.querySelector('.portfolio__list').append(el);
   });
+  
 }
 
 // TASK 5. Selecting Images
