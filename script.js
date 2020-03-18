@@ -2,7 +2,7 @@ window.onload = () => {
 
   // Header
   // TASK 1. Header Tabs
-  addNavigationClickHandler();
+  addNavigationScrollHandler();
 
   // Slider
   // TASK 2. Carousel functionality
@@ -23,25 +23,37 @@ window.onload = () => {
 
 // Header
 // TASK 1. Header Tabs
-const addNavigationClickHandler = () => {
-  let nav = document.querySelector('.navigation');
 
-  nav.addEventListener('click', (event) => {
-    if (event.target.tagName === 'A') {
-      let selectedLink = event.target;
-      selectClickedLink(selectedLink);
-    }
+const addNavigationScrollHandler = () => {
+  document.addEventListener('scroll', () => {
+    linkSwitcher();
   });
 }
 
-const selectClickedLink = (selectedLink) => {
-  let navigationLinks = document.querySelectorAll('.navigation .navigation__link');
+const linkSwitcher = () => {
+  const currentPos = window.scrollY + 95;
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navigation__link');
 
-  navigationLinks.forEach(elem => {
-    elem.classList.remove('navigation__link_active');
+  sections.forEach(section => {
+    if (section.offsetTop <= currentPos && (section.offsetTop + section.offsetHeight) > currentPos) {
+      navLinks.forEach(a => {
+        a.classList.remove('navigation__link_active');
+        if (section.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('navigation__link_active');
+        }
+      })
+    }
   });
 
-  selectedLink.classList.add('navigation__link_active');
+  if (document.documentElement.scrollTop + document.documentElement.clientHeight === document.documentElement.scrollHeight) {
+    document.querySelector('.navigation__link.navigation__link_active').classList.remove('navigation__link_active');
+    navLinks[navLinks.length - 1].classList.add('navigation__link_active');
+  }
+}
+
+const documentBottomCheck = () => {
+  
 }
 
 // Slider
