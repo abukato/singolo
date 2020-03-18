@@ -12,7 +12,7 @@
       <h1 class="logo"><a href="#">Singolo<span class="logo-star">*</span></a></h1>
       <nav>
         <ul class="navigation">
-          <li><a class="navigation__link navigation__link_active" href="#">Home</a></li>
+          <li><a class="navigation__link navigation__link_active" href="#home">Home</a></li>
           <li><a class="navigation__link" href="#services">Services</a></li>
           <li><a class="navigation__link" href="#portfolio">Portfolio</a></li>
           <li><a class="navigation__link" href="#about-us">About</a></li>
@@ -22,7 +22,7 @@
     </div>
   </header>
   <main>
-    <section class="slider">
+    <section class="slider" id="home">
       <div class="carousel" id="carousel">
         <div class="carousel__slides">
           <div class="carousel__slide">
@@ -225,7 +225,7 @@
               <input type="text" id="subject" name="subject" form="feedback-form" placeholder="Subject">
             </label>
             <label class="message" for="message">
-              <textarea id="message" name="message" form="feedback-form" placeholder="Describe your project in detail..."></textarea>
+              <textarea id="message" name="message" form="feedback-form" maxlength="1000" placeholder="Describe your project in detail..."></textarea>
             </label>
             <input id="submit-btn" class="submit-btn" type="submit" form="feedback-form" value="Send">
           </form>

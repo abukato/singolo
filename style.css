@@ -726,6 +726,7 @@ form {
   background-color: #fef9f9;
   border-radius: 5px;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .modal h4 {
