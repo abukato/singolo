@@ -19,10 +19,15 @@ window.onload = () => {
   // TASK 6. Submitting Form
   addSubmitButtonClickHandler();
   addCloseButtonClickHandler();
+
+  // Header
+  // TASK 7. Mobile menu
+  addHamburgerButtonClickHandler();
 }
 
 // Header
 // TASK 1. Header Tabs
+// TASK 7. Mobile menu
 
 const addNavigationScrollHandler = () => {
   document.addEventListener('scroll', () => {
@@ -49,6 +54,41 @@ const linkSwitcher = () => {
   if (document.documentElement.scrollTop + document.documentElement.clientHeight === document.documentElement.scrollHeight) {
     document.querySelector('.navigation__link.navigation__link_active').classList.remove('navigation__link_active');
     navLinks[navLinks.length - 1].classList.add('navigation__link_active');
+  }
+}
+
+const hamburger = document.querySelector('.header__hamburger');
+const mobileMenu = document.querySelector('.header__menu');
+
+const addHamburgerButtonClickHandler = () => {
+  hamburger.addEventListener('click', (event) => {
+    hamburgerRotate();
+    mobileMenuToggle();
+    mobileMenuLogo();
+  });
+}
+
+const hamburgerRotate = () => {
+  return hamburger.style.transform = 
+    hamburger.style.transform !== 'rotate(90deg)' 
+      ? 'rotate(90deg)' 
+      : 'rotate(0deg)';
+  ;
+}
+
+const mobileMenuToggle = () => {
+  return mobileMenu.style.display =
+    mobileMenu.style.display !== 'flex'
+      ? 'flex'
+      : 'none';
+  ;
+}
+
+const mobileMenuLogo = () => {
+  if (mobileMenu.style.display === 'flex') {
+    document.querySelector('.logo').classList.add('logo__menu');
+  } else {
+    document.querySelector('.logo').classList.remove('logo__menu');
   }
 }
 
