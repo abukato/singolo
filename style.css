@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   font-family: "Lato", sans-serif;
   scroll-behavior: smooth;
 }
@@ -87,11 +90,6 @@ header a {
   transition: color 150ms ease-in-out;
 }
 
-.navigation__link:hover {
-  color: #f06c64;
-  text-decoration: underline;
-}
-
 .navigation__link_active {
   color: #f06c64;
 }
@@ -141,16 +139,6 @@ main {
   width: 20px;
   height: 20px;
   transform: rotate(-45deg);
-}
-
-.carousel__controls__button:hover {
-  border-right-color: #000000;
-  border-bottom-color: #000000;
-}
-
-.carousel__controls__button:focus {
-  border-right-color: #000000;
-  border-bottom-color: #000000;
 }
 
 .carousel__slides {
@@ -219,13 +207,7 @@ main {
   border-radius: 50%;
   position: absolute;
   opacity: 0;
-  /* transition: opacity 0.5s ease-in; */
   z-index: 5;
-}
-
-.phone__button:hover {
-  opacity: 1;
-  cursor: pointer;
 }
 
 .vertical-phone__button {
@@ -423,14 +405,6 @@ section:not(:first-child) {
   margin-right: 7px;
 }
 
-.portfolio-controls__button:hover {
-  color: #666d89;
-  background-color: #c5c5c5;
-  border-color: #c5c5c5;
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
 .portfolio-controls__button:focus {
   color: #666d89;
   background-color: #c5c5c5;
@@ -438,7 +412,6 @@ section:not(:first-child) {
   cursor: pointer;
   transform: scale(1.05);
 }
-
 
 .portfolio-controls__button_active {
   color: #dedede;
@@ -472,11 +445,6 @@ section:not(:first-child) {
 
 .portfolio__preview:first-child {
   border-radius: 3px;
-}
-
-.portfolio__preview:hover {
-  cursor: pointer;
-  opacity: 0.5;
 }
 
 .preview {
@@ -669,11 +637,6 @@ section:not(:first-child) {
   background-image: url("./assets/images/linkedin.png");
 }
 
-.social__icon:hover {
-  cursor: pointer;
-  opacity: 0.5;
-}
-
 .feedback {
   padding-bottom: 10px;
   background-color: #f06c64;
@@ -706,65 +669,9 @@ form {
   width: 620px;
 }
 
-.modal {
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #0008;
-}
-
-.modal.hidden {
-  display: none;
-}
-
-.modal__message {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #fef9f9;
-  border-radius: 5px;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-.modal h4 {
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.modal p {
-  max-height: 330px;
-  margin-bottom: 15px;
-  text-align: justify;
-  overflow: auto;
-}
-
-.close-btn {
-  width: 100px;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 900;
-  transition: all 250ms ease-in-out;
-  background-color: #008080;
-  color: #ffffff;
-  border: none;
-}
-
-.close-btn:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 input,
 textarea {
+  font-family: "Lato", sans-serif;
   width: 619px;
   padding-left: 15px;
   padding-right: 15px;
@@ -792,11 +699,6 @@ textarea {
   overflow: auto;
 }
 
-input:hover,
-textarea:hover {
-  background-color: #d6363f;
-}
-
 input:focus,
 textarea:focus {
   background-color: #f0d8d9;
@@ -816,11 +718,6 @@ textarea::placeholder {
   text-transform: uppercase;
   transition: all 250ms ease-in-out;
   margin-bottom: 0px;
-}
-
-.submit-btn:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 .feedback__contact-info {
@@ -865,10 +762,6 @@ textarea::placeholder {
   transition: opacity 250ms ease-in;
 }
 
-.contacts__link:hover {
-  opacity: 0.7;
-}
-
 .contacts__icon-container {
   width: 13px;
   height: 13px;
@@ -911,6 +804,112 @@ footer {
 
 .footer-social {
   justify-content: space-between;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #0008;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal__message {
+  width: 500px;
+  max-height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fef9f9;
+  border-radius: 5px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.modal h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.modal p {
+  max-height: 330px;
+  margin-bottom: 15px;
+  text-align: justify;
+  overflow: auto;
+}
+
+.close-btn {
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 900;
+  transition: all 250ms ease-in-out;
+  background-color: #008080;
+  color: #ffffff;
+  border: none;
+}
+
+@media (hover: hover) {
+  .navigation__link:hover {
+    color: #f06c64;
+    text-decoration: underline;
+  }
+
+  .carousel__controls__button:hover {
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+  }
+
+  .phone__button:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .portfolio-controls__button:hover {
+    color: #666d89;
+    background-color: #c5c5c5;
+    border-color: #c5c5c5;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  .portfolio__preview:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .social__icon:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .submit-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .close-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  input:hover,
+  textarea:hover {
+  background-color: #d6363f;
+  }
+
+  .contacts__link:hover {
+    opacity: 0.7;
+  }
 }
 
 @media (max-width: 1019px) {
@@ -1402,6 +1401,18 @@ footer {
 
   .copyright {
     display: none;
+  }
+
+  .modal__message {
+    width: 80vw;
+    max-height: 80vw;
+  }
+
+  .modal p {
+    max-height: 10vh;
+    margin-bottom: 15px;
+    text-align: justify;
+    overflow: auto;
   }
 }
 
