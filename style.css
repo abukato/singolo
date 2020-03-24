@@ -1463,6 +1463,11 @@ footer {
 
   .portfolio__preview {
     width: calc(50vw - 30px);
-    height: calc(50vw - 73px);
+    height: calc(50vw - 63px);
+  }
+
+  .about-us__members-list {
+    flex-direction: column;
+    align-items: center;
   }
 }

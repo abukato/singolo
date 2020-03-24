@@ -219,7 +219,7 @@
         <div class="feedback__field">
           <form class="feedback-form" id="feedback-form" action="#" method="POST">
             <label for="name">
-              <input type="text" id="name" name="name" form="feedback-form" pattern="[a-zA-Z]+" minlength="2" maxlength="20" placeholder="Name (Required)" required>
+              <input type="text" id="name" name="name" form="feedback-form" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" minlength="2" maxlength="20" placeholder="Name (Required)" required>
             </label>
             <label for="email">
               <input type="email" id="email" name="email" form="feedback-form" placeholder="Email (Required)" required>
