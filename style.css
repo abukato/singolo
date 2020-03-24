@@ -1038,8 +1038,8 @@ footer {
   }
 
   .portfolio__preview {
-    width: calc(33vw - 37px);
-    height: calc(33vw - 70px);
+    width: calc(33vw - 43px);
+    height: calc(33vw - 76px);
     margin: 0 0 20px;
   }
 
@@ -1060,16 +1060,16 @@ footer {
   }
 
   .about-us__member {
-    width: calc(33vw - 30px);
+    width: calc(33vw - 35px);
   }
 
   .about-us__member:nth-child(2) {
-    width: calc(33vw - 30px);
+    width: calc(33vw - 35px);
   }
 
   .member__photo {
-    width: calc(33vw - 30px);
-    height: calc(33vw - 30px);
+    width: 100%;
+    height: calc(33vw - 40px);
     margin-bottom: 9px;
   }
 
@@ -1321,8 +1321,8 @@ footer {
   }
 
   .portfolio__preview {
-    width: calc(50vw - 36px);
-    height: calc(50vw - 60px);
+    width: calc(50vw - 47px);
+    height: calc(50vw - 80px);
     margin: 0 0 14px;
   }
 
@@ -1353,7 +1353,7 @@ footer {
   }
 
   .member__photo {
-    width: calc(100vw - 60px);
+    width: 100%;
     height: calc(100vw - 60px);
     margin-bottom: 17px;
   }
