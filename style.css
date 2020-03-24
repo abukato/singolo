@@ -293,7 +293,8 @@ section:not(:first-child) {
 }
 
 .services__item {
-  width: 300px;
+  max-width: 300px;
+  flex: 0 1 33%;
   display: flex;
   justify-content: space-between;
   padding-top: 33px;
@@ -1016,6 +1017,7 @@ footer {
   }
 
   .services__item {
+    flex: 0 1 50%;
     padding-top: 0;
     margin-bottom: 56px;
   }
@@ -1060,11 +1062,11 @@ footer {
   }
 
   .about-us__member {
-    width: calc(33vw - 35px);
+    width: calc(33vw - 40px);
   }
 
   .about-us__member:nth-child(2) {
-    width: calc(33vw - 35px);
+    width: calc(33vw - 40px);
   }
 
   .member__photo {
@@ -1294,6 +1296,7 @@ footer {
   }
 
   .services__item {
+    flex: 0 1 100%;
     margin-bottom: 30px;
   }
 
@@ -1456,5 +1459,10 @@ footer {
 
   .wrapper {
     padding: 0 15px;
+  }
+
+  .portfolio__preview {
+    width: calc(50vw - 30px);
+    height: calc(50vw - 73px);
   }
 }
